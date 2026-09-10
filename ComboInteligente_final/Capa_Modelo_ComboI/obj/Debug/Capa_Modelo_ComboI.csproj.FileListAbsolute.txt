@@ -1,0 +1,6 @@
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Modelo_ComboI\bin\Debug\Capa_Modelo_ComboI.dll
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Modelo_ComboI\bin\Debug\Capa_Modelo_ComboI.pdb
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Modelo_ComboI\obj\Debug\Capa_Modelo_ComboI.csproj.AssemblyReference.cache
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Modelo_ComboI\obj\Debug\Capa_Modelo_ComboI.csproj.CoreCompileInputs.cache
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Modelo_ComboI\obj\Debug\Capa_Modelo_ComboI.dll
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Modelo_ComboI\obj\Debug\Capa_Modelo_ComboI.pdb

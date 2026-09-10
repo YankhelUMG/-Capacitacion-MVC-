@@ -1,0 +1,9 @@
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\bin\Debug\Capa_Controlador_ComboI.dll
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\bin\Debug\Capa_Controlador_ComboI.pdb
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\obj\Debug\Capa_Controlador_ComboI.csproj.AssemblyReference.cache
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\obj\Debug\Capa_Controlador_ComboI.csproj.CoreCompileInputs.cache
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\obj\Debug\Capa_Controlador_ComboI.dll
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\obj\Debug\Capa_Controlador_ComboI.pdb
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\bin\Debug\Capa_Modelo_ComboI.dll
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\bin\Debug\Capa_Modelo_ComboI.pdb
+C:\Users\Yankhel\Desktop\MVC\practica2\ComboInteligente_final\Capa_Controlador_ComboI\obj\Debug\Capa_Con.FDD17549.Up2Date
