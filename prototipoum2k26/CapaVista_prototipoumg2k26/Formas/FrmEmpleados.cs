@@ -245,5 +245,10 @@ namespace CapaVista_prototipoumg2k26.Formas
         void CargarDatos()
         {
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "c:/Repositorios/-Capacitacion-MVC-/AyudaRisko/CapaRisko.chm","Cliente.html");
+        }
     }
 }

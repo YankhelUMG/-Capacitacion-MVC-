@@ -222,6 +222,7 @@
             this.btnAyuda.TabIndex = 8;
             this.btnAyuda.Text = "Ayuda";
             this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // comboI1
             // 
