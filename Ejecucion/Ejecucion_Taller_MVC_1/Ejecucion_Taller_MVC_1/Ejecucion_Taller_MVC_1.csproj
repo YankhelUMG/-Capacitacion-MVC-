@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaVista_MVC1">
-      <HintPath>..\..\..\Taller_MVC_1\CapaVista_MVC1\bin\Debug\CapaVista_MVC1.dll</HintPath>
+    <Reference Include="CapaVista_prototipoumg2k26">
+      <HintPath>..\..\..\prototipoum2k26\CapaVista_prototipoumg2k26\bin\Debug\CapaVista_prototipoumg2k26.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

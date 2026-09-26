@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Windows.Forms;
 using CapaControlador_prototipoumg2k26;
+using CapaVista_prototipoumg2k26.Reportes;
 
 namespace CapaVista_prototipoumg2k26.Formas
 {
@@ -19,6 +20,7 @@ namespace CapaVista_prototipoumg2k26.Formas
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             listaEmpleados();
+            CargarComboPuestos();
         }
 
         private void ConfigurarFormularioPuestos()
@@ -34,7 +36,7 @@ namespace CapaVista_prototipoumg2k26.Formas
             txtCumpleaños.Visible = false;
 
             // El combo del prototipo original correspondía a empleados/puestos y ya no aplica.
-            comboI1.Visible = false;
+            //comboI1.Visible = false;
             txtSearch.Width = 736;
 
             dgvEmpleados.AutoGenerateColumns = true;
@@ -56,6 +58,36 @@ namespace CapaVista_prototipoumg2k26.Formas
             }
         }
 
+        private void CargarComboPuestos()
+        {
+            try
+            {
+                var puestos = empleado.GetAll();
+                var sugerencias = new AutoCompleteStringCollection();
+
+                foreach (var puesto in puestos)
+                {
+                    sugerencias.Add(puesto.Nombre);
+                    sugerencias.Add(puesto.IdPuesto + " - " + puesto.Nombre);
+                }
+
+                comboI1.DataSource = puestos;
+                comboI1.DisplayMember = "Nombre";
+                comboI1.ValueMember = "IdPuesto";
+                comboI1.AutoCompleteCustomSource = sugerencias;
+                comboI1.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                comboI1.DataSource = null;
+                MessageBox.Show(
+                    "No fue posible cargar el combo de puestos.\n\n" + ex.Message,
+                    "Error de base de datos",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
         private void AjustarColumnas()
         {
             if (dgvEmpleados.Columns["IdPuesto"] != null)
@@ -86,6 +118,13 @@ namespace CapaVista_prototipoumg2k26.Formas
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNumeroID.Text))
+            {
+                MessageBox.Show("Ingrese el nombre del puesto.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNumeroID.Focus();
+                return;
+            }
+
             decimal salario;
             if (!decimal.TryParse(txtCorreo.Text, NumberStyles.Number, CultureInfo.CurrentCulture, out salario) &&
                 !decimal.TryParse(txtCorreo.Text, NumberStyles.Number, CultureInfo.InvariantCulture, out salario))
@@ -103,9 +142,22 @@ namespace CapaVista_prototipoumg2k26.Formas
             if (valido)
             {
                 string resultado = empleado.GrabarCambios();
-                MessageBox.Show(resultado);
-                listaEmpleados();
-                Reinicio();
+                bool operacionExitosa = !resultado.StartsWith("Error:", StringComparison.OrdinalIgnoreCase) &&
+                                        resultado != "No se ha definido una operación";
+
+                MessageBox.Show(
+                    resultado,
+                    operacionExitosa ? "Puestos" : "Error",
+                    MessageBoxButtons.OK,
+                    operacionExitosa ? MessageBoxIcon.Information : MessageBoxIcon.Error
+                );
+
+                if (operacionExitosa)
+                {
+                    listaEmpleados();
+                    CargarComboPuestos();
+                    Reinicio();
+                }
             }
         }
 
@@ -161,6 +213,7 @@ namespace CapaVista_prototipoumg2k26.Formas
                     string resultado = empleado.GrabarCambios();
                     MessageBox.Show(resultado);
                     listaEmpleados();
+                    CargarComboPuestos();
                 }
             }
             else
@@ -168,7 +221,25 @@ namespace CapaVista_prototipoumg2k26.Formas
                 MessageBox.Show("Seleccione una fila");
             }
         }
-
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FrmReporteEmpleados reporte = new FrmReporteEmpleados())
+                {
+                    reporte.ShowDialog(this);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "No fue posible generar el reporte.\n\n" + ex.Message,
+                    "Error de impresión",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
         // Se mantiene el método porque pertenece al archivo original, pero el combo ya no es necesario
         // para tbl_Puestos.
         void CargarDatos()

@@ -46,7 +46,7 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
-            this.comboI1 = new Capa_Vista_ComboI.ComboI();
+            this.comboI1 = new System.Windows.Forms.ComboBox();
             this.panIngresoDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
@@ -108,9 +108,8 @@
             this.lblCumpleaños.AutoSize = true;
             this.lblCumpleaños.Location = new System.Drawing.Point(35, 206);
             this.lblCumpleaños.Name = "lblCumpleaños";
-            this.lblCumpleaños.Size = new System.Drawing.Size(83, 16);
+            this.lblCumpleaños.Size = new System.Drawing.Size(0, 16);
             this.lblCumpleaños.TabIndex = 6;
-            this.lblCumpleaños.Text = "";
             // 
             // txtCorreo
             // 
@@ -124,7 +123,7 @@
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Location = new System.Drawing.Point(32, 144);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(118, 16);
+            this.lblCorreo.Size = new System.Drawing.Size(84, 16);
             this.lblCorreo.TabIndex = 4;
             this.lblCorreo.Text = "Salario base";
             // 
@@ -133,7 +132,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(27, 77);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.Size = new System.Drawing.Size(79, 16);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Descripción";
             // 
@@ -149,7 +148,7 @@
             this.lblNumeroID.AutoSize = true;
             this.lblNumeroID.Location = new System.Drawing.Point(27, 20);
             this.lblNumeroID.Name = "lblNumeroID";
-            this.lblNumeroID.Size = new System.Drawing.Size(136, 16);
+            this.lblNumeroID.Size = new System.Drawing.Size(122, 16);
             this.lblNumeroID.TabIndex = 1;
             this.lblNumeroID.Text = "Nombre del puesto";
             // 
@@ -212,6 +211,7 @@
             this.btnImprimir.TabIndex = 7;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnAyuda
             // 
@@ -225,9 +225,12 @@
             // 
             // comboI1
             // 
-            this.comboI1.Location = new System.Drawing.Point(33, 32);
+            this.comboI1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboI1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboI1.FormattingEnabled = true;
+            this.comboI1.Location = new System.Drawing.Point(33, 40);
             this.comboI1.Name = "comboI1";
-            this.comboI1.Size = new System.Drawing.Size(736, 25);
+            this.comboI1.Size = new System.Drawing.Size(736, 24);
             this.comboI1.TabIndex = 9;
             // 
             // FrmEmpleados
@@ -276,6 +279,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnAyuda;
-        private Capa_Vista_ComboI.ComboI comboI1;
+        private System.Windows.Forms.ComboBox comboI1;
     }
 }
