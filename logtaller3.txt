@@ -1,0 +1,16 @@
+* 1844bc6 (HEAD -> main, origin/main, origin/HEAD, desarrollo_de_reportes) Agregando reportes
+* e215eb6 Add files via upload
+*   f5b0d26 Merge branch 'master'
+|\  
+| * f4c1487 (origin/master, origin/Diseño_Capa_Modelo_0901-23-2429) Agrego proyecto practica2 a rama Modelo
+| * b71e762 (origin/Diseño_Capa_Vista_0901-23-2429, origin/Diseño_Capa_Controlador_0901-23-2429) Commit Subida de proyecto
+*   e42a053 Merge pull request #1 from YankhelUMG/Diseño_Capa_Modelo_0901-23-2429
+|\  
+| * 262a3cb Agrego proyecto prototipoumg2k26
+|/  
+*   b922369 Integro cambios de main remoto
+|\  
+| * ff24a8a Initial commit
+* 371aec0 Actualizo GitLog
+* b96c6ab (origin/Diseño_Capa_Vista_0901-23-2429_Roger_Herrera) Agrego GitLog
+* 3b83e4a (origin/Diseño_Capa_Modelo_0901-23-2429_Roger_Herrera, origin/Diseño_Capa_Controlador_0901-23-2429_Roger_Herrera) Subida de documentos MVC
